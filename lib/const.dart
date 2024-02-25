@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //my colors
 //////////////////////////////////////////////////////////////
 class MyColors {
+  static const Color kPrimaryColor = Color(0xff62FCD7);
   static const Color kWhite = Colors.white;
   static const Color kOrange = Color(0xffFFCC80);
   static const Color kBlack = Colors.black;
