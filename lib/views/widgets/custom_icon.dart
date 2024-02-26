@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app_with_local_storge/const.dart';
 
-class CustomSearchIcon extends StatelessWidget {
-  const CustomSearchIcon({
+class CustomIcon extends StatelessWidget {
+  final IconData icon;
+  const CustomIcon({
     super.key,
+    required this.icon,
   });
 
   @override
@@ -17,7 +19,7 @@ class CustomSearchIcon extends StatelessWidget {
       ),
       child: Center(
         child: Icon(
-          Icons.search,
+          icon,
           size: heightScreen * .03,
         ),
       ),
