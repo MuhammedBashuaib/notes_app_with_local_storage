@@ -16,7 +16,14 @@ class NotesListView extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             vertical: heightScreen * .01,
           ),
-          child: const CustomNoteItem(),
+          child: CustomNoteItem(
+            noteTitle: "Flutter Tips",
+            noteContent: "This is notes app with local storage, test.",
+            date: "May 21,2024",
+            onTap: () {
+              Navigator.of(context).pushNamed(MyRoutes.editNoteView);
+            },
+          ),
         );
       },
     );

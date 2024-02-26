@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app_with_local_storge/const.dart';
+import 'package:notes_app_with_local_storge/views/edit_note_view.dart';
 import 'package:notes_app_with_local_storge/views/notes_view.dart';
 
 void main() {
@@ -19,7 +20,11 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         fontFamily: "Poppins",
       ),
-      home: const NotesView(),
+      routes: {
+        MyRoutes.notesView: (context) => const NotesView(),
+        MyRoutes.editNoteView: (context) => const EditNoteView(),
+      },
+      initialRoute: MyRoutes.notesView,
     );
   }
 }

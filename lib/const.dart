@@ -25,4 +25,7 @@ initializeHWFSize(BuildContext context) {
 
 //My routes
 ///////////////////////////////////////////////
-class MyRoutes {}
+class MyRoutes {
+  static const String notesView = "/";
+  static const String editNoteView = "editNoteView";
+}
