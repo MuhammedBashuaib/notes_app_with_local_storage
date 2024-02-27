@@ -29,3 +29,10 @@ class MyRoutes {
   static const String notesView = "/";
   static const String editNoteView = "editNoteView";
 }
+///////////////////////////////////////////////
+
+//My routes
+///////////////////////////////////////////////
+class MyHiveConstent {
+  static const String kNotesBox = "note_box";
+}
