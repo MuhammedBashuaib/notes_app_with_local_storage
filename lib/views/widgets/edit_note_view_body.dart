@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app_with_local_storge/const.dart';
 import 'package:notes_app_with_local_storge/views/widgets/custom_app_bar.dart';
-import 'package:notes_app_with_local_storge/views/widgets/custom_text_field.dart';
+import 'package:notes_app_with_local_storge/views/widgets/custom_text_form_field.dart';
 
 class EditNoteViewBody extends StatelessWidget {
   const EditNoteViewBody({super.key});
@@ -25,11 +25,11 @@ class EditNoteViewBody extends StatelessWidget {
           SizedBox(
             height: heightScreen * .04,
           ),
-          const CustomTextField(hintText: "Title"),
+          const CustomTextFormField(hintText: "Title"),
           SizedBox(
             height: heightScreen * 0.03,
           ),
-          const CustomTextField(
+          const CustomTextFormField(
             hintText: "Content",
             maxLines: 5,
           )
