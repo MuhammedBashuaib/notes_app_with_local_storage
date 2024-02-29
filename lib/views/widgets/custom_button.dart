@@ -3,9 +3,11 @@ import 'package:notes_app_with_local_storge/const.dart';
 
 class CustomButton extends StatelessWidget {
   final void Function()? onTap;
+  final bool isLoding;
   const CustomButton({
     super.key,
     this.onTap,
+    this.isLoding = false,
   });
 
   @override
@@ -20,14 +22,22 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(widthScreen * .03),
         ),
         child: Center(
-          child: Text(
-            "Add",
-            style: TextStyle(
-              color: MyColors.kBlack,
-              fontSize: fSize * 1.3,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          child: isLoding
+              ? SizedBox(
+                  height: heightScreen * .03,
+                  width: widthScreen * .065,
+                  child: const CircularProgressIndicator(
+                    color: MyColors.kBlack54,
+                  ),
+                )
+              : Text(
+                  "Add",
+                  style: TextStyle(
+                    color: MyColors.kBlack,
+                    fontSize: fSize * 1.3,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
         ),
       ),
     );

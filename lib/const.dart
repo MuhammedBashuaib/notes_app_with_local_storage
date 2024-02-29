@@ -7,6 +7,7 @@ class MyColors {
   static const Color kWhite = Colors.white;
   static const Color kOrange = Color(0xffFFCC80);
   static const Color kBlack = Colors.black;
+  static const Color kBlack54 = Colors.black54;
 }
 //////////////////////////////////////////////////////////////
 
