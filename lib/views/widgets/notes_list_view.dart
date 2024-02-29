@@ -24,9 +24,7 @@ class NotesListView extends StatelessWidget {
                 vertical: heightScreen * .01,
               ),
               child: CustomNoteItem(
-                noteTitle: "Flutter Tips",
-                noteContent: "This is notes app with local storage, test.",
-                date: "May 21,2024",
+                noteModel: notes[index],
                 onTap: () {
                   Navigator.of(context).pushNamed(MyRoutes.editNoteView);
                 },

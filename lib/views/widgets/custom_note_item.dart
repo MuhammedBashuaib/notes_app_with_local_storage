@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app_with_local_storge/const.dart';
+import 'package:notes_app_with_local_storge/models/note_model.dart';
 
 class CustomNoteItem extends StatelessWidget {
   final Function()? onTap;
-  final String noteTitle;
-  final String noteContent;
-  final String date;
+  final NoteModel noteModel;
   const CustomNoteItem({
     super.key,
     this.onTap,
-    required this.noteTitle,
-    required this.noteContent,
-    required this.date,
+    required this.noteModel,
   });
 
   @override
@@ -20,7 +17,7 @@ class CustomNoteItem extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: MyColors.kOrange,
+          color: Color(noteModel.color),
           borderRadius: BorderRadius.circular(widthScreen * .03),
         ),
         padding: EdgeInsets.symmetric(
@@ -34,7 +31,7 @@ class CustomNoteItem extends StatelessWidget {
               title: Padding(
                 padding: EdgeInsets.only(bottom: heightScreen * .02),
                 child: Text(
-                  noteTitle,
+                  noteModel.title,
                   style: TextStyle(
                     color: MyColors.kBlack,
                     fontSize: fSize * 1.3,
@@ -45,7 +42,7 @@ class CustomNoteItem extends StatelessWidget {
               subtitle: Padding(
                 padding: EdgeInsets.only(bottom: heightScreen * .02),
                 child: Text(
-                  noteContent,
+                  noteModel.content,
                   style: TextStyle(
                     color: MyColors.kBlack.withOpacity(.5),
                     fontSize: fSize * 1.2,
@@ -67,7 +64,7 @@ class CustomNoteItem extends StatelessWidget {
                 right: widthScreen * .04,
               ),
               child: Text(
-                date,
+                noteModel.date,
                 style: TextStyle(
                   color: MyColors.kBlack.withOpacity(.5),
                   fontSize: fSize,
