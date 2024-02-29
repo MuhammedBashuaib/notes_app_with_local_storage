@@ -32,10 +32,7 @@ class NotesView extends StatelessWidget {
           size: heightScreen * .035,
         ),
       ),
-      body: BlocProvider(
-        create: (context) => NotesCubit(),
-        child: const NotesViewBody(),
-      ),
+      body: const NotesViewBody(),
     );
   }
 }
