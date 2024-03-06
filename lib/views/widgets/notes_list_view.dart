@@ -26,7 +26,10 @@ class NotesListView extends StatelessWidget {
               child: CustomNoteItem(
                 noteModel: notes[index],
                 onTap: () {
-                  Navigator.of(context).pushNamed(MyRoutes.editNoteView);
+                  Navigator.of(context).pushNamed(
+                    MyRoutes.editNoteView,
+                    arguments: notes[index],
+                  );
                 },
               ),
             );

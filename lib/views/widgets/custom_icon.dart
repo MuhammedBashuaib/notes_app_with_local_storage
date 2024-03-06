@@ -3,9 +3,11 @@ import 'package:notes_app_with_local_storge/const.dart';
 
 class CustomIcon extends StatelessWidget {
   final IconData icon;
+  final void Function()? onPressed;
   const CustomIcon({
     super.key,
     required this.icon,
+    this.onPressed,
   });
 
   @override
@@ -18,9 +20,12 @@ class CustomIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(widthScreen * .03),
       ),
       child: Center(
-        child: Icon(
-          icon,
-          size: heightScreen * .03,
+        child: IconButton(
+          icon: Icon(
+            icon,
+            size: heightScreen * .03,
+          ),
+          onPressed: onPressed,
         ),
       ),
     );
