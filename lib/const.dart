@@ -9,6 +9,14 @@ class MyColors {
   static const Color kBlack = Colors.black;
   static const Color kBlack54 = Colors.black54;
 }
+
+const List<Color> kNoteColors = [
+  Color(0xffAC3931),
+  Color(0xffE5D352),
+  Color(0xffD9E76C),
+  Color(0xff537D8D),
+  Color(0xff482C3D),
+];
 //////////////////////////////////////////////////////////////
 
 //Screen coordinates and the default size of the font

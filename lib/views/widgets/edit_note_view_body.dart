@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app_with_local_storge/const.dart';
 import 'package:notes_app_with_local_storge/cubit/notes_cubit/notes_cubit.dart';
 import 'package:notes_app_with_local_storge/models/note_model.dart';
+import 'package:notes_app_with_local_storge/views/widgets/color_list_view.dart';
 import 'package:notes_app_with_local_storge/views/widgets/custom_app_bar.dart';
 import 'package:notes_app_with_local_storge/views/widgets/custom_text_form_field.dart';
+import 'package:notes_app_with_local_storge/views/widgets/edit_note_color_list_view.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   final NoteModel note;
@@ -60,7 +62,13 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             onChanged: (value) {
               content = value;
             },
-          )
+          ),
+          SizedBox(
+            height: heightScreen * .04,
+          ),
+          EditeNoteColorList(
+            note: widget.note,
+          ),
         ],
       ),
     );
