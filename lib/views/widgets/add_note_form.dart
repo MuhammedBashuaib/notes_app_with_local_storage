@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:notes_app_with_local_storge/const.dart';
 import 'package:notes_app_with_local_storge/cubit/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app_with_local_storge/models/note_model.dart';
+import 'package:notes_app_with_local_storge/views/widgets/color_list_view.dart';
 import 'package:notes_app_with_local_storge/views/widgets/custom_button.dart';
 import 'package:notes_app_with_local_storge/views/widgets/custom_text_form_field.dart';
 
@@ -48,7 +49,11 @@ class _AddNoteFormState extends State<AddNoteForm> {
             },
           ),
           SizedBox(
-            height: heightScreen * .1,
+            height: heightScreen * .03,
+          ),
+          const ColorListView(),
+          SizedBox(
+            height: heightScreen * .03,
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
