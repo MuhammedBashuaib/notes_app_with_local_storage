@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:notes_app_with_local_storge/const.dart';
-import 'package:notes_app_with_local_storge/cubit/notes_cubit/notes_cubit.dart';
 import 'package:notes_app_with_local_storge/views/widgets/add_note_buttom_sheet.dart';
 import 'package:notes_app_with_local_storge/views/widgets/notes_view_body.dart';
 
